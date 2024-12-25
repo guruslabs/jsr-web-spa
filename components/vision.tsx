@@ -5,10 +5,10 @@ export function Vision() {
         <h2 className="text-4xl font-bold text-center mb-16">Our Vision</h2>
         <div className="max-w-4xl mx-auto prose prose-lg">
           <p className="text-xl leading-relaxed text-muted-foreground text-center">
-            At JSR Spaces, we envision a world where spaces transcend mere physical boundaries to become catalysts for innovation, collaboration, and growth. Our commitment to excellence drives us to create environments that inspire, nurture, and elevate the human experience.
+          our vision is to empower entrepreneurs by providing both the physical and technological infrastructure needed to bring their ideas to life. With over a decade of experience in the tech industry, we understand that innovation thrives when the right tools and spaces are in place.
           </p>
           <p className="text-xl leading-relaxed text-muted-foreground text-center mt-8">
-            Through thoughtful design, sustainable practices, and cutting-edge technology, we transform ordinary spaces into extraordinary experiences. Our dedication to quality and attention to detail ensures that every project we undertake reflects our passion for creating spaces that leave a lasting impact.
+          Our mission is to create dynamic work environments that cater to the diverse needs of startups and established businesses alike—whether it's through flexible office spaces, cutting-edge meeting rooms, or scalable solutions that grow with your business. We believe that by offering both a collaborative physical space and seamless technological support, we can help entrepreneurs focus on what truly matters: turning their vision into reality.
           </p>
         </div>
       </div>

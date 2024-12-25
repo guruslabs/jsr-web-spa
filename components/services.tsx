@@ -3,36 +3,36 @@
 import { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from './ui/dialog';
 import { Button } from './ui/button';
-import { Building2, Briefcase, PenTool, Home } from 'lucide-react';
+import { Building2, Briefcase, PenTool, Home, User, Table, Table2, Monitor, Printer, Phone } from 'lucide-react';
 
 const services = [
   {
-    icon: Building2,
-    title: 'Commercial Spaces',
-    shortDesc: 'Modern office spaces designed for productivity and collaboration',
-    longDesc: 'Our commercial spaces are meticulously designed to foster innovation and productivity. We combine ergonomic design principles with modern aesthetics to create workspaces that inspire creativity and drive success.',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c',
+    icon: User,
+    title: 'Coworking Mebership',
+    shortDesc: 'Collaborative workspaces designed to foster networking, creativity, and productivity.',
+    longDesc: 'Ccollaborative workspaces designed to foster networking, creativity, and productivity. Flexible membership plans. Networking opportunities. Access to communal areas, kitchen, and lounges.',
+    image: 'https://i.ibb.co/JmjC1Jy/shared2.jpg',
   },
   {
-    icon: Home,
-    title: 'Residential Projects',
-    shortDesc: 'Luxury living spaces that redefine comfort',
-    longDesc: 'Experience the perfect blend of luxury and comfort in our residential projects. Each space is thoughtfully crafted to create an environment that reflects your personality while maintaining the highest standards of modern living.',
-    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0',
+    icon: Printer,
+    title: 'Private Offices',
+    shortDesc: 'Private offices tailored to your team\'s needs, with all the amenities of a modern workplace.',
+    longDesc: 'Private offices tailored to your team\'s needs, with all the amenities of a modern workplace. 24/7 access. High-speed internet. Meeting rooms.',
+    image: 'https://i.ibb.co/JCnRzwY/office.jpg',
   },
   {
-    icon: PenTool,
-    title: 'Interior Design',
-    shortDesc: 'Bespoke interior solutions for every space',
-    longDesc: 'Our interior design services transform spaces into stunning environments that perfectly balance aesthetics and functionality. We work closely with clients to create unique designs that reflect their vision and lifestyle.',
-    image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6',
+    icon: Phone,
+    title: 'Virtual Offices',
+    shortDesc: 'Professional virtual office services to enhance your business presence without the need for a physical location.',
+    longDesc: 'Professional virtual office services to enhance your business presence without the need for a physical location. ',
+    image: 'https://i.ibb.co/WPCQyV9/cabins4.jpg',
   },
   {
-    icon: Briefcase,
-    title: 'Project Management',
-    shortDesc: 'End-to-end project execution and monitoring',
-    longDesc: 'Our experienced project management team ensures seamless execution from concept to completion. We handle all aspects of the project lifecycle, maintaining the highest standards of quality and efficiency.',
-    image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf',
+    icon: Monitor,
+    title: 'Meeting & Event Spaces',
+    shortDesc: 'Book our stylish meeting and event spaces for client meetings, team events, or workshops.',
+    longDesc: 'Book our stylish meeting and event spaces for client meetings, team events, or workshops. ',
+    image: 'https://i.ibb.co/Xk8fyN5/shared5.jpg',
   },
 ];
 

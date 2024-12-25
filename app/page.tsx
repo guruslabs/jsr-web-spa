@@ -7,6 +7,7 @@ import { Services } from '@/components/services';
 import { Clients } from '@/components/clients';
 import { Contact } from '@/components/contact';
 import { Toaster } from '@/components/ui/sonner';
+import { Footer } from '@/components/footer';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Services />
       <Clients />
       <Contact />
+      <Footer />
       <Toaster />
     </main>
   );

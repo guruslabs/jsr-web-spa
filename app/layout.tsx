@@ -5,8 +5,8 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'JSR Spaces - Modern Living & Working Spaces',
-  description: 'Transform your space with JSR Spaces. We create beautiful, functional environments for modern living and working.',
+  title: 'JSR Spaces',
+  description: 'Bridging ideas, minds, and futures—an inspiring nexus of creativity and connectivity.',
 };
 
 export default function RootLayout({
