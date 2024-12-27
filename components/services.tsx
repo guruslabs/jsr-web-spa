@@ -8,7 +8,7 @@ import { Building2, Briefcase, PenTool, Home, User, Table, Table2, Monitor, Prin
 const services = [
   {
     icon: User,
-    title: 'Coworking Mebership',
+    title: 'Coworking Membership',
     shortDesc: 'Collaborative workspaces designed to foster networking, creativity, and productivity.',
     longDesc: 'Ccollaborative workspaces designed to foster networking, creativity, and productivity. Flexible membership plans. Networking opportunities. Access to communal areas, kitchen, and lounges.',
     image: 'https://i.ibb.co/JmjC1Jy/shared2.jpg',

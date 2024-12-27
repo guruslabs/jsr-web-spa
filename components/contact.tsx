@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
+import validator from "validator";
 import { toast } from 'sonner';
 import {
   Form,
@@ -27,6 +28,7 @@ import { Button } from './ui/button';
 const formSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
   email: z.string().email('Invalid email address'),
+  phone: z.string().refine(validator.isMobilePhone, 'Invalid phone address'),
   service: z.string().min(1, 'Please select a service'),
   message: z.string().min(10, 'Message must be at least 10 characters'),
 });
@@ -39,6 +41,7 @@ export function Contact() {
     defaultValues: {
       name: '',
       email: '',
+      phone: '',
       service: '',
       message: '',
     },
@@ -47,9 +50,15 @@ export function Contact() {
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
     try {
-      // In a real application, you would send this to your API
-      console.log('Form submitted:', values);
-      await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate API call
+      const rawResponse = await fetch('/api/submit', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(values)
+      });
+      const content = await rawResponse.json();
       toast.success('Message sent successfully!');
       form.reset();
     } catch (error) {
@@ -96,6 +105,20 @@ export function Contact() {
 
               <FormField
                 control={form.control}
+                name="phone"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Phone No.</FormLabel>
+                    <FormControl>
+                      <Input placeholder="+201040806692" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
                 name="service"
                 render={({ field }) => (
                   <FormItem>
@@ -103,14 +126,14 @@ export function Contact() {
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
                         <SelectTrigger>
-                          <SelectValue placeholder="Select a service" />
+                          <SelectValue placeholder="Select a Service" />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
-                        <SelectItem value="commercial">Commercial Spaces</SelectItem>
-                        <SelectItem value="residential">Residential Projects</SelectItem>
-                        <SelectItem value="interior">Interior Design</SelectItem>
-                        <SelectItem value="project">Project Management</SelectItem>
+                        <SelectItem value="CoWorking Membership">CoWorking Membership</SelectItem>
+                        <SelectItem value="Private Office">Private Office</SelectItem>
+                        <SelectItem value="Virtual Office">Virtual Office</SelectItem>
+                        <SelectItem value="Meeting & Events">Meeting & Events</SelectItem>
                       </SelectContent>
                     </Select>
                     <FormMessage />

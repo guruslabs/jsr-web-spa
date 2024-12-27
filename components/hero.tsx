@@ -6,17 +6,17 @@ import { Button } from './ui/button';
 
 const slides = [
   {
-    image: 'https://i.ibb.co/hDvK7D3/hero-cabin.jpg',
+    image: 'https://i.ibb.co/c88Cv8n/caddf6d4-a76c-40e1-bca9-6b0f582e25f0.jpg',
     title: 'Premium Ofice Spaces',
     description: 'Experience fully funished office spaces with flexible options.',
   },
   {
-    image: 'https://i.ibb.co/JmjC1Jy/shared2.jpg',
+    image: 'https://i.ibb.co/N9B0G8y/2361aa6d-0628-473b-b9ff-22fc4ef40917.jpg',
     title: 'Innovative Design',
     description: 'Where creativity meets functionality in perfect harmony',
   },
   {
-    image: 'https://i.ibb.co/tx1jHNP/shared4.jpg',
+    image: 'https://i.ibb.co/pfbgMjR/883ba95d-501f-41f7-ac23-efdeede993d9.jpg',
     title: 'Luxerious Furniture',
     description: 'Comfort setting for your productivity.',
   },
